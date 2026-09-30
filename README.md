@@ -1,0 +1,2 @@
+# AI-Driven-Network-Intrusion-Detection-and-Threat-Monitoring-System
+AI-Driven Network Intrusion Detection and Threat Monitoring System for detecting and monitoring suspicious network activities. Uses machine learning techniques to analyze network traffic and identify potential cyber threats and anomalous behavior. Designed to provide automated threat detection and real-time network security monitoring.
