@@ -1,0 +1,268 @@
+{
+  "stage1": {
+    "best_model": "Random Forest",
+    "comparison": {
+      "Logistic Regression": {
+        "accuracy": 0.996,
+        "precision": 0.996,
+        "recall": 0.996,
+        "f1_score": 0.996,
+        "training_time_sec": 0.027
+      },
+      "Decision Tree": {
+        "accuracy": 0.9995,
+        "precision": 0.9995,
+        "recall": 0.9995,
+        "f1_score": 0.9995,
+        "training_time_sec": 0.013
+      },
+      "Random Forest": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "training_time_sec": 0.814
+      },
+      "Gradient Boosting": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "training_time_sec": 1.158
+      },
+      "SVM": {
+        "accuracy": 0.9935,
+        "precision": 0.9936,
+        "recall": 0.9935,
+        "f1_score": 0.9935,
+        "training_time_sec": 0.627
+      }
+    },
+    "confusion_matrix": [
+      [
+        1100,
+        0
+      ],
+      [
+        0,
+        900
+      ]
+    ],
+    "classification_report": {
+      "Normal": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1100.0
+      },
+      "Attack": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 900.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2000.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2000.0
+      }
+    },
+    "labels": [
+      "Normal",
+      "Attack"
+    ]
+  },
+  "stage2": {
+    "best_model": "Decision Tree",
+    "comparison": {
+      "Logistic Regression": {
+        "accuracy": 0.9978,
+        "precision": 0.9978,
+        "recall": 0.9978,
+        "f1_score": 0.9978,
+        "training_time_sec": 0.033
+      },
+      "Decision Tree": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "training_time_sec": 0.017
+      },
+      "Random Forest": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "training_time_sec": 0.705
+      },
+      "Gradient Boosting": {
+        "accuracy": 0.9967,
+        "precision": 0.9967,
+        "recall": 0.9967,
+        "f1_score": 0.9967,
+        "training_time_sec": 6.013
+      },
+      "SVM": {
+        "accuracy": 0.9978,
+        "precision": 0.9978,
+        "recall": 0.9978,
+        "f1_score": 0.9978,
+        "training_time_sec": 0.199
+      }
+    },
+    "confusion_matrix": [
+      [
+        200,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        200,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        100
+      ]
+    ],
+    "classification_report": {
+      "Brute Force": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "DDoS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "DoS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "Port Scan": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "Suspicious Traffic": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 100.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 900.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 900.0
+      }
+    },
+    "labels": [
+      "Brute Force",
+      "DDoS",
+      "DoS",
+      "Port Scan",
+      "Suspicious Traffic"
+    ]
+  },
+  "feature_importance": {
+    "stage1": {
+      "source_port": 0.0,
+      "destination_port": 0.0083,
+      "packet_count": 0.0924,
+      "byte_count": 0.1445,
+      "packet_size": 0.0171,
+      "duration": 0.1289,
+      "packets_per_second": 0.0365,
+      "bytes_per_second": 0.0494,
+      "connection_count": 0.1553,
+      "failed_connections": 0.139,
+      "request_rate": 0.0774,
+      "response_rate": 0.0359,
+      "payload_size": 0.0441,
+      "flow_rate": 0.0712,
+      "protocol": 0.0,
+      "tcp_flags": 0.0
+    },
+    "stage2": {
+      "source_port": 0.0,
+      "destination_port": 0.0,
+      "packet_count": 0.0,
+      "byte_count": 0.0,
+      "packet_size": 0.0,
+      "duration": 0.2625,
+      "packets_per_second": 0.0,
+      "bytes_per_second": 0.0,
+      "connection_count": 0.4643,
+      "failed_connections": 0.0,
+      "request_rate": 0.2732,
+      "response_rate": 0.0,
+      "payload_size": 0.0,
+      "flow_rate": 0.0,
+      "protocol": 0.0,
+      "tcp_flags": 0.0
+    }
+  },
+  "feature_columns": [
+    "source_port",
+    "destination_port",
+    "packet_count",
+    "byte_count",
+    "packet_size",
+    "duration",
+    "packets_per_second",
+    "bytes_per_second",
+    "connection_count",
+    "failed_connections",
+    "request_rate",
+    "response_rate",
+    "payload_size",
+    "flow_rate",
+    "protocol",
+    "tcp_flags"
+  ]
+}
